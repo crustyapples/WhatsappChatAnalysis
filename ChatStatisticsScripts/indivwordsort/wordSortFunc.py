@@ -17,7 +17,6 @@ def wordSort(script, wordlength, listLength):
     finaldataDict = count
     dataTupleList = list(finaldataDict.items())
     sortedTupleList = sorted(dataTupleList, key=itemgetter(1), reverse=True)
- #   sortedTupleList = sorted(sortedTupleList, key=itemgetter(0), reverse=)
     truncatedList = []
     for i in range(int(listLength)):
         truncatedList.append(sortedTupleList[i])
