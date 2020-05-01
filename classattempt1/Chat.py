@@ -1,12 +1,8 @@
 import re
 from operator import itemgetter
 
-path = 'C:\\Users\\user\\pythonTINGS\\dataTOPLAYWITH\\WhatsApp Chat - WHO IS BOOMER BANDICOOT\\_chat.txt'
-chat_file = open(path, encoding="utf8")
-script = chat_file.read()
 
-
-class ChatStat:
+class ChatText:
     def __init__(self, text):
         self.text = text
 
@@ -17,12 +13,12 @@ class ChatStat:
         return message_list
 
     def messageCount(self):
-        print(len(ChatStat.messages(self)))
+        print(len(ChatText.messages(self)))
 
     def wordCount(self, word_length, list_length):
         self.word_length = word_length
         self.list_length = list_length
-        word_script = ' '.join(ChatStat.messages(self))
+        word_script = ' '.join(ChatText.messages(self))
         pattern = '[a-z]{%s,}' % word_length
         word_search = re.compile(pattern)
         word_list = word_search.findall(word_script)
